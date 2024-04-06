@@ -1,12 +1,15 @@
 pipeline {
     agent any
 
+    environment {
+        nodejs = 'C:\\Program Files\\nodejs\\node.exe'
+        npm = 'C:\\Program Files\\nodejs\\npm.cmd'
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
-                script {
-                    sh 'npm install'
-                }
+                bat "\"${npm}\" install"
             }
         }
     }
