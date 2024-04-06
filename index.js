@@ -7,7 +7,8 @@ app.get(
     (req, res) => {
         res.json({
             status: 200,
-            data: "Data fetched successfully"
+            data: "Data fetched successfully",
+            error: "null"
         })
     }
 )
