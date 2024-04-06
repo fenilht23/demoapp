@@ -13,6 +13,17 @@ app.get(
     }
 )
 
+app.get(
+    "/byid",
+    (req, res) => {
+        res.json({
+            status: 200,
+            data: "Data fetched by id successfully",
+            error: "null"
+        })
+    }
+)
+
 app.listen(
     3000,
     () => {
