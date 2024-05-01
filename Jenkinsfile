@@ -11,9 +11,7 @@ pipeline {
             steps {
                 bat "\"${npm}\" install"
             }
-        }
-    }
-    stages {
+        },
         stage('Run App') {
             steps {
                 bat "\"${nodejs}\" index.js"
