@@ -13,4 +13,18 @@ pipeline {
             }
         }
     }
+    stages {
+        stage('Build App') {
+            steps {
+                bat "\"${npm}\" run build"
+            }
+        }
+    }
+    stages {
+        stage('Run App') {
+            steps {
+                bat "\"${nodejs}\" index.js"
+            }
+        }
+    }
 }
